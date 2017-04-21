@@ -4,26 +4,26 @@
 //2017-04-20
 import java.util.*;
 
-public class ArrayPriorityQueue<T> implements PriorityQueue<T>{
+public class ArrayPriorityQueue<Ticket> implements PriorityQueue<Ticket>{
 
     //instance variables
-    ArrayList<T> queue;
+    ArrayList<Ticket> queue;
     int size;
 
     //constructor
     public ArrayPriorityQueue(){
-	queue = new ArrayList<T>();
+	queue = new ArrayList<Ticket>();
 	size = 0;
     }
 
-    // postcondition: x has been added to the priority queue; 
-    //                 number of elements in the priority queue is increased by 1 
-    public void add(T x){
+    // postcondition: x has been added to the priority queue;
+    //                 number of elements in the priority queue is increased by 1
+    public void add(Ticket x){
 	queue.add(x);
 	size ++;
     }
 
-    // postcondition: returns true if the number of elements in 
+    // postcondition: returns true if the number of elements in
     //                 the priority queue is 0; otherwise, returns false
     public boolean isEmpty(){
 	if (size == 0){
@@ -53,24 +53,24 @@ public class ArrayPriorityQueue<T> implements PriorityQueue<T>{
 	}
     }
 
-    // postcondition: The smallest item in the priority queue is removed 
-    //                 and returned; the number of elements in the priority queue 
+    // postcondition: The smallest item in the priority queue is removed
+    //                 and returned; the number of elements in the priority queue
     //                 is decreased by 1
     //                 throws an unchecked exception if the priority queue is empty
-    public T removeMin(){
+    public Ticket removeMin(){
 	int index = finder();
-	T minimum = queue.get(index);
+	Ticket minimum = queue.get(index);
 	queue.remove(index);
 	size--;
 	return minimum;
     }
 
-    // postcondition: The smallest item in the priority queue is returned; the 
-    //                 priority queue is unchanged 
-    //                 throws an unchecked exception if the priority queue is empty 
-    public T peekMin(){
+    // postcondition: The smallest item in the priority queue is returned; the
+    //                 priority queue is unchanged
+    //                 throws an unchecked exception if the priority queue is empty
+    public Ticket peekMin(){
 	int index = finder();
-	T minimum = queue.get(index);
+	Ticket minimum = queue.get(index);
 	return minimum;
     }
 
@@ -91,7 +91,7 @@ public class ArrayPriorityQueue<T> implements PriorityQueue<T>{
 
     public static void main(String[] args){
 	ArrayPriorityQueue<Integer> britain = new ArrayPriorityQueue<Integer>();
-	
+
 	System.out.println("\n\nAdding elements to britain...");
         System.out.println("britain before adding: " + britain);
         britain.add(5);
@@ -109,11 +109,3 @@ public class ArrayPriorityQueue<T> implements PriorityQueue<T>{
     }//end main
 
 }//end class
-	    
-
-	    
-	
-    
-
-    
-    

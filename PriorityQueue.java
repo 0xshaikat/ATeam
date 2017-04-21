@@ -1,17 +1,17 @@
-public interface PriorityQueue<T>{
+public interface PriorityQueue<Ticket>{
 
-    //Adds an item to this priority queue.     
-    void add(T x);
-    
-    //Returns true if this stack is empty, otherwise returns false. 
+    //Adds an item to this priority queue.
+    void add(Ticket x);
+
+    //Returns true if this stack is empty, otherwise returns false.
     boolean isEmpty();
 
     //Removes andd returns the smallest item stored in this priority queue.
-    // Throws java.lang.RuntimeException - if the priority queue is empty (unchecked) 
-    T removeMin();
+    // Throws java.lang.RuntimeException - if the priority queue is empty (unchecked)
+    Ticket removeMin();
 
-    //Returns the smallest item stored in this priority queue without removing. 
+    //Returns the smallest item stored in this priority queue without removing.
     //Throws java.lang.RuntimeException - if the priority queue is empty (unchecked)
-    T peekMin();
+    Ticket peekMin();
 
 }
