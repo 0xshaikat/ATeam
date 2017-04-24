@@ -17,7 +17,7 @@ public class Ticket{
     ID = 0;
     solved =false;
     name = "unknown";
-    solution ="youtellme";
+    solution ="unknown";
   }
 
   public static void setSolved(boolean f){
@@ -66,5 +66,21 @@ public class Ticket{
 
   public static void setID(int f){
     ID = f;
+  }
+
+  public String toString(){
+    String s = "\nTICKET NO. ";
+    s+= ID;
+    s+= "\n";
+    s+= "Name: ";
+    s+= name;
+    s+= "\n";
+    s+="SOLUTION: ";
+    s+= solution;
+    s+= "\n";
+    s+="PROBLEM: ";
+    s+= problem;
+    s+= "\n";
+    return s;
   }
 }
