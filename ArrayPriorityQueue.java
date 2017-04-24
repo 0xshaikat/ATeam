@@ -5,7 +5,7 @@
 
 import java.util.*;
 
-public class ArrayPriorityQueue<Ticket> implements PriorityQueue<Ticket>{
+public class ArrayPriorityQueue<T> {
 
   //instance variables
   ArrayList<Ticket> queue;
@@ -42,8 +42,8 @@ public class ArrayPriorityQueue<Ticket> implements PriorityQueue<Ticket>{
     if (size > 0){
       int index = 0;
       for (int i = 0; i < size; i++){
-        Comparable minimum = (Comparable)queue.get(index);
-        Comparable indexitem = (Comparable)queue.get(i);
+        Comparable minimum = (Comparable) queue.get(index).getVIP();
+        Comparable indexitem = (Comparable) queue.get(i).getVIP();
         if(indexitem.compareTo(minimum) < 0){
           index = i;
         }
@@ -76,6 +76,10 @@ public class ArrayPriorityQueue<Ticket> implements PriorityQueue<Ticket>{
     return minimum;
   }
 
+  public int getSize(){
+    return size;
+  }
+
   //postcondition: returns string format of queue
   public String toString(){
     String s = "{";
@@ -91,23 +95,6 @@ public class ArrayPriorityQueue<Ticket> implements PriorityQueue<Ticket>{
     return s;
   }
 
-  public static void main(String[] args){
-    ArrayPriorityQueue<Integer> britain = new ArrayPriorityQueue<Integer>();
 
-    System.out.println("\n\nAdding elements to britain...");
-    System.out.println("britain before adding: " + britain);
-    britain.add(5);
-    britain.add(4);
-    britain.add(3);
-    britain.add(2);
-    britain.add(102392);
-    System.out.println("britain after adding: " + britain);
-
-    while(!britain.isEmpty()){
-      System.out.println("\nMin value: "+ britain.peekMin());
-      System.out.println(britain.removeMin());
-      System.out.println("britain after removing: " + britain);
-    }
-  }//end main
 
 }//end class
