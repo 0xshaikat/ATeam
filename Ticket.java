@@ -1,49 +1,70 @@
+//ATeam(Federico Tondolo, Mohamed Tamara, Shaikat Islam)
+//APCS2 pd05
+//LAB #03: RUVIP?
+//2017-04-23
+
 public class Ticket{
-  private int VIPlvl;
-  private String prob;
-  private int IDnum;
-  private boolean solv;
-  private String name;
-  private String solutionz;
+  private static int VIPlvl;
+  private static String problem;
+  private static int ID;
+  private static boolean solved;
+  private static String name;
+  private static String solution;
 
   public Ticket(){
     VIPlvl=5;
-    prob="unknown";
-    IDnum=9999;
-    solv=false;
-    name="whatevs";
-    solutionz="howshouldiknow";
+    problem ="unknown";
+    ID = 0;
+    solved =false;
+    name = "unknown";
+    solution ="youtellme";
   }
 
-  public void setSolv(boolean f){
-    solv=f;
+  public static void setSolved(boolean f){
+    solved = f;
   }
 
-  public boolean getSolv(){
-    return solv;
+  public static boolean getSolved(){
+    return solved;
   }
 
-  public void setSolutionz(String f){
-    solutionz=f;
+  public static void setSolution(String f){
+    solution=f;
   }
 
-  public String getSolutionz(){
-    return solutionz;
+  public static String getSolution(){
+    return solution;
   }
 
-  public void setVIP(int f){
+  public static void setVIP(int f){
     VIPlvl=f;
   }
 
-  public int getVIPlvl(){
+  public static int getVIP(){
     return VIPlvl;
   }
 
-  public String getProb(){
-    return prob;
+  public static void setName(String f){
+    name = f;
   }
 
-  public int getIDnum(){
-    return IDnum;
+  public static String getName(){
+    return name;
+  }
+
+  public static String getProb(){
+    return problem;
+  }
+
+  public static void setProb(String f){
+    problem = f;
+  }
+
+  public static int getID(){
+    return ID;
+  }
+
+  public static void setID(int f){
+    ID = f;
   }
 }
