@@ -23,12 +23,12 @@ public class HelpDesk{
     tick.setID(ticketprocessed);
     //ensure next ticket has a higher number
     ticketprocessed ++;
-    //name of the dude/dudette
-    System.out.println("What is your name, sir?");
+    //name of the dude/dudette/don't assume genders
+    System.out.println("Whomst'd've'll're's is you?");
     String name = Keyboard.readString();
     tick.setName(name);
     //what is the problem?
-    System.out.println("What is the nature of your problem?");
+    System.out.println("The hell do you want?");
     String problem = Keyboard.readString();
     tick.setProb(problem);
     // VIP Level
@@ -36,6 +36,7 @@ public class HelpDesk{
     int viplvl = Keyboard.readInt();
     tick.setVIP(viplvl);
     System.out.println("Thank you for using FMS Corp. Your services are appreciated.");
+    System.out.println("Now get out.");
     System.out.println("Here is your ticket, for your own purposes: " + tick);
     customers.add(tick);
     System.out.println("If you have more tickets, entere 'true' in the next dialogue.");
