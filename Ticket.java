@@ -35,7 +35,7 @@ public class Ticket{
     VIPlvl=f;
   }
 
-  public int getVIP(){
+  public int getVIPlvl(){
     return VIPlvl;
   }
 
